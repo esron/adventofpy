@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def run():
@@ -27,7 +26,7 @@ def run():
     if second_window > first_window:
         increased += 1
 
-    click.echo(increased)
+    print(increased)
 
 
 if __name__ == "__main__":

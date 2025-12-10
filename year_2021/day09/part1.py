@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def run():
@@ -57,7 +56,7 @@ def run():
     if map[-1][-2] > map[-1][-1] < map[-2][-1]:
         risk_level += 1 + int(map[-1][-1])
 
-    click.echo(risk_level)
+    print(risk_level)
 
 
 if __name__ == "__main__":

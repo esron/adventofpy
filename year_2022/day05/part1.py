@@ -2,8 +2,6 @@ from collections import deque
 from collections.abc import Iterable, Mapping
 import os
 from typing import IO, Deque
-import click
-
 
 def read_stacks(file: IO) -> Mapping[str, Deque[str]]:
     input: Iterable[str] = []
@@ -21,15 +19,11 @@ def read_stacks(file: IO) -> Mapping[str, Deque[str]]:
                 else:
                     stacks[c] = deque([input[i][j]])
     return stacks
-
-
 def execute_instruction(instruction: str, stacks: Mapping[str, Deque]):
     _, quantity, _, origin, _, destiny = instruction.split(' ')
     quantity = int(quantity)
     for _ in range(quantity):
         stacks[destiny].append(stacks[origin].pop())
-
-
 def run():
     with open(os.getcwd() + '/year_2022/day05/input.txt') as f:
         stacks = read_stacks(f)
@@ -39,8 +33,6 @@ def run():
         for _, s in stacks.items():
             if len(s) != 0:
                 top_of_stacks += s[-1]
-        click.echo(top_of_stacks)
-
-
+        print(top_of_stacks)
 if __name__ == "__main__":
     run()

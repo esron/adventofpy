@@ -2,8 +2,6 @@ from decimal import Decimal
 import os
 from queue import PriorityQueue
 from typing import Iterable, Optional
-import click
-
 
 class Point:
     def __init__(self, coord: tuple[int, int], value: str) -> None:
@@ -49,28 +47,20 @@ class Point:
     def __str__(self) -> str:
         return f'{{ x: {str(self.x)}, y: {str(self.y)}, f: {self.total_cost}, \
 g: {self.distance_from_root} value: {self.value} }}'
-
-
 def find_point_position(point: str, map: list[list[str]]) -> tuple[int, int]:
     for i in range(len(map)):
         for j in range(len(map[i])):
             if map[i][j] == point:
                 return i, j
     return 0, 0
-
-
 def is_in_range(x: int, y: int, grid: list[list[Point]]) -> bool:
     return (0 <= x < len(grid)) and (0 <= y < len(grid[x]))
-
-
 def append_if_in_range(grid: list[list[Point]], neighbors: list[Point],
                        direction: tuple[int, int], point: Point) -> None:
     if is_in_range(*direction, grid):
         n_ord = grid[direction[0]][direction[1]].value
         if point.value <= n_ord + 1:
             neighbors.append(grid[direction[0]][direction[1]])
-
-
 def get_neighbors(point: Point,
                   grid: list[list[Point]]) -> Iterable[Point]:
     n = []
@@ -79,8 +69,6 @@ def get_neighbors(point: Point,
     append_if_in_range(grid, n, (point.x + 1, point.y), point)
     append_if_in_range(grid, n, (point.x, point.y + 1), point)
     return n
-
-
 def pathfinder(A: Point, grid: list[list[Point]]) -> list[Point]:
     open_list = PriorityQueue()
     open_list.put(A)
@@ -109,8 +97,6 @@ def pathfinder(A: Point, grid: list[list[Point]]) -> list[Point]:
 
                 open_list.put(n)
     return goals
-
-
 def run():
     map = []
     with open(os.getcwd() + '/year_2022/day12/input.txt') as f:
@@ -130,8 +116,6 @@ def run():
     points = pathfinder(start, point_map)
 
     for point in points:
-        click.echo(point)
-
-
+        print(point)
 if __name__ == "__main__":
     run()

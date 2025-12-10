@@ -1,13 +1,9 @@
 import os
-import click
-
 
 class Tree:
     def __init__(self, value: str) -> None:
         self.value = int(value)
         self.visited = False
-
-
 def run():
     map = None
     with open(os.getcwd() + '/year_2022/day08/input.txt') as f:
@@ -72,8 +68,6 @@ def run():
                 if highest == 9:
                     break
 
-    click.echo(visible)
-
-
+    print(visible)
 if __name__ == "__main__":
     run()

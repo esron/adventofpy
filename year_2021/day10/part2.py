@@ -1,5 +1,4 @@
 import os
-import click
 from collections import deque
 
 
@@ -43,7 +42,7 @@ def run():
 
             scores.append(score)
 
-    click.echo(sorted(scores)[int(len(scores) / 2)])
+    print(sorted(scores)[int(len(scores) / 2)])
 
 
 if __name__ == "__main__":

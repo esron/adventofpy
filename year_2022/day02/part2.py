@@ -1,7 +1,5 @@
 import os
 
-import click
-
 OP_ROCK = 'A'
 OP_PAPPER = 'B'
 OP_SCISSORS = 'C'
@@ -50,17 +48,11 @@ wanted_outcome_map = {
 
 def invert_map(my_map):
     return {v: k for k, v in my_map.items()}
-
-
 def choose_my_play(op_play, wanted_value):
     wanted_outcome = wanted_outcome_map[wanted_value]
     return invert_map(prs_map[op_play])[wanted_outcome]
-
-
 def score(outcome, my_play):
     return outcome_map[outcome] + points_map[my_play]
-
-
 def run():
     points = 0
     f = open(os.getcwd() + '/year_2022/day02/input.txt')
@@ -69,8 +61,6 @@ def run():
         my_play = choose_my_play(op_play, wanted_outcome) 
         outcome = prs_map[op_play][my_play]
         points += score(outcome, my_play) 
-    click.echo(points)
-
-
+    print(points)
 if __name__ == "__main__":
     run()

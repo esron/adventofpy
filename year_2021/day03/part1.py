@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def run():
@@ -65,7 +64,7 @@ def run():
     gamma_rate = int(gamma_rate, 2)
     epsilon_rate = int(epsilon_rate, 2)
 
-    click.echo(gamma_rate * epsilon_rate)
+    print(gamma_rate * epsilon_rate)
 
 
 if __name__ == "__main__":

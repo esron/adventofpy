@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def run():
@@ -19,7 +18,7 @@ def run():
         fishes.extend(new_fishes)
         new_fishes = []
 
-    click.echo(len(fishes))
+    print(len(fishes))
 
 
 if __name__ == "__main__":

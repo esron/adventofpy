@@ -1,5 +1,4 @@
 import os
-import click
 from collections import deque
 
 
@@ -26,7 +25,7 @@ def run():
                 score += closing[c][1]
                 break
 
-    click.echo(score)
+    print(score)
 
 
 if __name__ == "__main__":

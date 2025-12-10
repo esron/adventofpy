@@ -1,5 +1,4 @@
 import os
-import click
 from typing import Iterable
 
 
@@ -60,7 +59,7 @@ def run():
     execute(instructions[0], points)
     points = remove_equals(points)
 
-    click.echo(len(points))
+    print(len(points))
 
 
 if __name__ == "__main__":

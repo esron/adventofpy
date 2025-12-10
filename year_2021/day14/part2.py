@@ -1,5 +1,4 @@
 import os
-import click
 from typing import Iterable, Mapping, Union
 
 
@@ -42,8 +41,8 @@ def run():
     element_counts = {k: v for k, v in sorted(
         element_counts.items(), key=lambda item: item[1])}
 
-    click.echo(element_counts[list(element_counts.keys())[-1]] -
-               element_counts[list(element_counts.keys())[0]])
+    print(element_counts[list(element_counts.keys())[-1]] -
+          element_counts[list(element_counts.keys())[0]])
 
 
 if __name__ == "__main__":

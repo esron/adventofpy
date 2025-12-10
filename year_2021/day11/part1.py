@@ -1,5 +1,4 @@
 import os
-import click
 
 board = []
 counter = 0
@@ -51,7 +50,7 @@ def run():
         step()
         flash()
 
-    click.echo(counter)
+    print(counter)
 
 
 if __name__ == "__main__":

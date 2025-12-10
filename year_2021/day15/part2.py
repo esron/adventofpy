@@ -1,5 +1,4 @@
 import os
-import click
 from decimal import Decimal
 from typing import Iterable
 from queue import PriorityQueue
@@ -121,7 +120,7 @@ def run():
 
     point = pathfinder(start, goal, grid)
 
-    click.echo(point.f)
+    print(point.f)
 
 
 if __name__ == "__main__":

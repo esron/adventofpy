@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def run():
@@ -12,7 +11,7 @@ def run():
             if len(s) in (2, 3, 4, 7):
                 count += 1
 
-    click.echo(count)
+    print(count)
 
 
 if __name__ == "__main__":

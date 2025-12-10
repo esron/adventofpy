@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def s(n):
@@ -25,7 +24,7 @@ def run():
         f = calculate_fuel(crabs, p)
         min_fuel = f if f < min_fuel else min_fuel
 
-    click.echo(min_fuel)
+    print(min_fuel)
 
 
 if __name__ == "__main__":

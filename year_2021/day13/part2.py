@@ -1,5 +1,4 @@
 import os
-import click
 from typing import Iterable
 
 
@@ -54,7 +53,7 @@ def draw(points, size_x, size_y):
 
     for p in points:
         display[p.y][p.x] = '#'
-    click.echo(''.join([''.join(line) for line in display]))
+    print(''.join([''.join(line) for line in display]))
 
 
 def run():

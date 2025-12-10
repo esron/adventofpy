@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def calculate_basin_size(map, i, j):
@@ -80,7 +79,7 @@ def run():
     for b in basins[:3]:
         output *= b
 
-    click.echo(output)
+    print(output)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,4 @@
 import os
-import click
-
 
 def run():
     f = open(os.getcwd() + '/year_2022/day03/input.txt')
@@ -17,8 +15,6 @@ def run():
         elf_a = set(f.readline().rstrip())
         elf_b = set(f.readline().rstrip())
         elf_c = set(f.readline().rstrip())
-    click.echo(priority_sum)
-
-
+    print(priority_sum)
 if __name__ == "__main__":
     run()

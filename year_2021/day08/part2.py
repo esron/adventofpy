@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def sort_and_split(input):
@@ -68,7 +67,7 @@ def run():
                     numbers[2] = i
         total += calculate_line(numbers, output)
 
-    click.echo(total)
+    print(total)
 
 
 if __name__ == "__main__":

@@ -1,16 +1,10 @@
 import os
 import json
 from enum import Enum
-
-import click
-
-
 class States(Enum):
     RIGHT_ORDER = 'RIGHT_ORDER',
     WRONG_ORDER = 'WRONG_ORDER',
     INCONCLUSIVE = 'INCONCLUSIVE'
-
-
 def compare_pairs(left: list, right: list) -> States:
     """Returns True if pairs are in the right order."""
     for i in range(len(left)):
@@ -44,8 +38,6 @@ def compare_pairs(left: list, right: list) -> States:
         return States.RIGHT_ORDER
 
     return States.INCONCLUSIVE
-
-
 def run():
     with open(os.getcwd() + '/year_2022/day13/input.txt') as f:
         line = '¯\\_(ツ)_/¯'
@@ -61,8 +53,6 @@ def run():
             line = f.readline()
             index += 1
 
-        click.echo(index_sum)
-
-
+        print(index_sum)
 if __name__ == "__main__":
     run()

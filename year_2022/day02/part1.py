@@ -1,15 +1,11 @@
 import os
 
-import click
-
 OP_ROCK = 'A'
 OP_PAPPER = 'B'
 OP_SCISSORS = 'C'
 MY_ROCK = 'X'
 MY_PAPPER = 'Y'
 MY_SCISSORS = 'Z'
-
-
 prs_map = {
     OP_ROCK: {
         MY_ROCK: 'draw',
@@ -47,8 +43,6 @@ def run():
         op_play, my_play = line.rstrip().split(' ')
         outcome = prs_map[op_play][my_play]
         points += (outcome_map[outcome] + points_map[my_play])
-    click.echo(points)
-
-
+    print(points)
 if __name__ == "__main__":
     run()

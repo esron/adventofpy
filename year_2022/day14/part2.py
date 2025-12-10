@@ -1,12 +1,6 @@
 import os
-
-import click
-
-
 def space_is_empty(coordinate: tuple[int, int], walls: set) -> bool:
     return coordinate not in walls
-
-
 def run():
     low_boundary = 0  # Start at the top the bigger the better
     walls = set()
@@ -58,8 +52,6 @@ def run():
             if sand[1] > low_boundary:
                 walls.add(tuple(sand))
                 rested = True
-    click.echo(how_many_sands)
-
-
+    print(how_many_sands)
 if __name__ == "__main__":
     run()

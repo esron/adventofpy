@@ -1,10 +1,6 @@
 import os
-import click
-
 
 timers = {'addx': 2, 'noop': 1}
-
-
 def run():
     x = 1
     clock = 0
@@ -23,8 +19,6 @@ def run():
                 instruction = f.readline().rstrip().split(' ')
                 timer = timers[instruction[0]]
 
-    click.echo(signal_strenght_sum)
-
-
+    print(signal_strenght_sum)
 if __name__ == "__main__":
     run()

@@ -1,5 +1,4 @@
 import os
-import click
 from typing import Optional
 
 
@@ -79,7 +78,7 @@ def run():
 
     pathfinder(Node.start_node, [])
 
-    click.echo(len(paths))
+    print(len(paths))
 
 
 if __name__ == "__main__":

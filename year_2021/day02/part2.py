@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def run():
@@ -20,7 +19,7 @@ def run():
         if comand == 'up':
             aim -= value
 
-    click.echo(depth * position)
+    print(depth * position)
 
 
 if __name__ == "__main__":

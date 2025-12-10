@@ -1,6 +1,4 @@
 import os
-import click
-
 
 def run():
     with open(os.getcwd() + '/year_2022/day04/input.txt') as f:
@@ -12,8 +10,6 @@ def run():
             if (bounds[0][0] <= bounds[1][0] and bounds[0][1] >= bounds[1][1]) or \
                     (bounds[0][0] >= bounds[1][0] and bounds[0][1] <= bounds[1][1]):
                 contains += 1
-        click.echo(contains)
-
-
+        print(contains)
 if __name__ == "__main__":
     run()

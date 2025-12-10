@@ -1,5 +1,4 @@
 import os
-import click
 from collections import deque
 
 
@@ -23,7 +22,7 @@ def run():
     for i in input:
         fishes[int(i)] += 1
 
-    click.echo(count_fish(fishes, 256))
+    print(count_fish(fishes, 256))
 
 
 if __name__ == "__main__":

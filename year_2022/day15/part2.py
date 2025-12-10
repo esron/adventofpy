@@ -1,9 +1,5 @@
 import os
 import re
-
-import click
-
-
 class Sensor:
     def __init__(self,
                  coords: tuple[int, int],
@@ -25,8 +21,6 @@ class Sensor:
         return f'<s ({self.x},{self.y})' + \
             f' b ({self.beacon_x}, {self.beacon_y})' + \
             f' d={self.d}>'
-
-
 def mergeIntervals(intervals: list[tuple[int, int]]) -> list[tuple[int, int]]:
     # Sort the array on the basis of start values of intervals.
     intervals.sort()
@@ -42,8 +36,6 @@ def mergeIntervals(intervals: list[tuple[int, int]]) -> list[tuple[int, int]]:
             stack.append(i)
 
     return stack
-
-
 def run():
     regex = r'x=(-?\d*), y=(-?\d*)'
     sensors: list[Sensor] = []
@@ -67,9 +59,7 @@ def run():
         intervals = mergeIntervals(intervals)
         if len(intervals) == 2:
             x = intervals[0][1] + 1
-            click.echo(x * 4000000 + y)
+            print(x * 4000000 + y)
             break
-
-
 if __name__ == "__main__":
     run()

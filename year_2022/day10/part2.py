@@ -1,10 +1,6 @@
 import os
-import click
-
 
 timers = {'addx': 2, 'noop': 1}
-
-
 def run():
     x = 1
     clock = 0
@@ -19,7 +15,7 @@ def run():
                 # I don't know why first line is missing one #
                 if len(line) == 39:
                     line = '#' + line
-                click.echo(line)
+                print(line)
                 line = ''
             if timer == 0:
                 if instruction[0] == 'addx':
@@ -32,7 +28,5 @@ def run():
                 line += '#'
             else:
                 line += ' '
-
-
 if __name__ == "__main__":
     run()

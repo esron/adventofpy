@@ -2,8 +2,6 @@ from collections import deque
 from math import prod
 import os
 from typing import Union
-import click
-
 
 class Monkey:
     def __init__(
@@ -49,30 +47,18 @@ class Monkey:
             monkey_index = self.__test_item(item)
             return monkey_index, item
         return (None, None)
-
-
 def get_starting_items(monkey_raw_data: str) -> list[int]:
     return [int(x) for x in monkey_raw_data.strip().split(': ')[1].split(',')]
-
-
 def get_operation(monkey_raw_data: str) -> tuple[str, Union[int, str]]:
     operator, operand = monkey_raw_data.strip().split(' ')[-2:]
     operand = int(operand) if operand.isnumeric() else operand
     return operator, operand
-
-
 def get_test_value(monkey_raw_data: str) -> int:
     return int(monkey_raw_data.strip().split(' ')[-1])
-
-
 def monkey_to_move_when_test_true(monkey_raw_data: str) -> int:
     return int(monkey_raw_data.strip().split(' ')[-1])
-
-
 def monkey_to_move_when_test_false(monkey_raw_data: str) -> int:
     return int(monkey_raw_data.strip().split(' ')[-1])
-
-
 def run():
     file_lines = []
     monkeys: list[Monkey] = []
@@ -95,8 +81,6 @@ def run():
                 if m_index is not None and item is not None:
                     monkeys[m_index].items.append(item)
     monkeys = sorted(monkeys, key=lambda x: x.inspected_items, reverse=True)
-    click.echo(monkeys[0].inspected_items * monkeys[1].inspected_items)
-
-
+    print(monkeys[0].inspected_items * monkeys[1].inspected_items)
 if __name__ == "__main__":
     run()

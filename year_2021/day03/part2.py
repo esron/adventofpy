@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def filter_ones(values, index):
@@ -45,7 +44,7 @@ def run():
     ogr = int(oxygen_generator_rating(input, 0), 2)
     csr = int(CO2_scrubber_rating(input, 0), 2)
 
-    click.echo(ogr * csr)
+    print(ogr * csr)
 
 
 if __name__ == "__main__":

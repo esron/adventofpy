@@ -1,6 +1,4 @@
 import os
-import click
-
 
 def run():
     file = open(os.getcwd() + '/year_2022/day01/input.txt')
@@ -17,8 +15,6 @@ def run():
             sum = 0
             continue
         sum += int(line)
-    click.echo(max)
-
-
+    print(max)
 if __name__ == "__main__":
     run()

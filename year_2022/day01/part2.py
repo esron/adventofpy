@@ -1,6 +1,4 @@
 import os
-import click
-
 
 def run():
     file = open(os.getcwd() + '/year_2022/day01/input.txt')
@@ -17,8 +15,6 @@ def run():
             continue
         s += int(line)
     sums.sort(reverse=True)
-    click.echo(sum(sums[:3]))
-
-
+    print(sum(sums[:3]))
 if __name__ == "__main__":
     run()

@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def bingo(board):
@@ -54,7 +53,7 @@ def run():
             boards = list(filter(lambda b: not bingo(b), boards))
         else:
             if bingo(boards[0]):
-                click.echo(score(boards[0]) * int(number))
+                print(score(boards[0]) * int(number))
                 return
 
 

@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def bingo(board):
@@ -50,7 +49,7 @@ def run():
                         boards[b][i][j] = 'X'
 
                         if bingo(boards[b]):
-                            click.echo(score(boards[b]) * int(number))
+                            print(score(boards[b]) * int(number))
                             return
 
 

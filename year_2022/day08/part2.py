@@ -1,6 +1,4 @@
 import os
-import click
-
 
 def look_up(map: list[list[int]], line: int, column: int) -> int:
     score = 1
@@ -9,8 +7,6 @@ def look_up(map: list[list[int]], line: int, column: int) -> int:
         score += 1
         i -= 1
     return score
-
-
 def look_down(map: list[list[int]], line: int, column: int) -> int:
     score = 1
     i = line + 1
@@ -18,8 +14,6 @@ def look_down(map: list[list[int]], line: int, column: int) -> int:
         score += 1
         i += 1
     return score
-
-
 def look_right(map: list[list[int]], line: int, column: int) -> int:
     score = 1
     j = column + 1
@@ -27,8 +21,6 @@ def look_right(map: list[list[int]], line: int, column: int) -> int:
         score += 1
         j += 1
     return score
-
-
 def look_left(map: list[list[int]], line: int, column: int) -> int:
     score = 1
     j = column - 1
@@ -36,8 +28,6 @@ def look_left(map: list[list[int]], line: int, column: int) -> int:
         score += 1
         j -= 1
     return score
-
-
 def calculate_scenic_score(map: list[list[int]],
                            line: int, column: int) -> int:
     up_score = look_up(map, line, column)
@@ -46,8 +36,6 @@ def calculate_scenic_score(map: list[list[int]],
     left_score = look_left(map, line, column)
 
     return up_score * rigth_score * down_score * left_score
-
-
 def run():
     map = None
     with open(os.getcwd() + '/year_2022/day08/input.txt') as f:
@@ -60,8 +48,6 @@ def run():
             if scenic_score > highest_scenic_score:
                 highest_scenic_score = scenic_score
 
-    click.echo(highest_scenic_score)
-
-
+    print(highest_scenic_score)
 if __name__ == "__main__":
     run()

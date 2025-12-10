@@ -1,5 +1,4 @@
 import os
-import click
 
 
 def run():
@@ -14,7 +13,7 @@ def run():
         actual = int(line)
         if actual > previous:
             increased += 1
-    click.echo(increased)
+    print(increased)
 
 
 if __name__ == "__main__":

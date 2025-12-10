@@ -1,5 +1,4 @@
 import os
-import click
 
 board = []
 
@@ -56,7 +55,7 @@ def run():
         flash()
         steps += 1
 
-    click.echo(steps)
+    print(steps)
 
 
 if __name__ == "__main__":
