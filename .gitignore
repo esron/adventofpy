@@ -6,4 +6,5 @@
 .pytest_cache
 .eggs
 build
+**/input.txt
 __pycache__
