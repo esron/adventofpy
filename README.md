@@ -6,34 +6,16 @@ This repository holds my solutions to Advent of Code problems implemented as a P
 
 ## Setup
 
-Create a virtual environment:
+Use uv
 
 ```bash
-python -m venv .venv
-```
-
-Activate it:
-
-```bash
-source .venv/bin/activate
-```
-
-Install dependencies and build:
-
-```bash
-pip install .
-```
-
-Install dev dependencies:
-
-```bash
-pip install -r requirements.txt
+uv sync
 ```
 
 ## Usage
 
 ```bash
-python adventoofpy.py [OPTIONS]
+python main.py [OPTIONS]
 ```
 
 ## Options
